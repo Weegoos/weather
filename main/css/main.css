@@ -1,0 +1,337 @@
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+  overflow-y: scroll;
+}
+
+.wrapper{
+    /* display: none; */
+}
+
+:root{
+    --winter: #e0ffff;
+    --colorWinter: #000080;
+    --summer: #40e0d0;
+    --summerColor: #000000;
+    --border_radius: 8px;
+
+    --headerBackgroundColor: #fafafa;
+}
+
+.navigation{
+    position: absolute;
+    height: 13%;
+    left: 0%;
+    width: 100vw;
+    z-index: 101;
+    border: solid var(--headerBackgroundColor) 1px;
+    background: var(--headerBackgroundColor);
+    box-shadow: 1px 1px 2px 1px black;
+}
+
+.navigation input{
+    position: absolute;
+    width: 15%;
+    top: 25%;
+    left: 70%;
+}
+
+.navigation button{
+    position: absolute;
+    top: 0%;
+    left: 85%;
+    top: 25%;
+}
+
+.showTheNameOfCity{
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    font-size: 18px;
+}
+
+
+.header{
+    position: absolute;
+    left: 9%;
+    top: 18%;
+    z-index: 100;
+    width: 20%;
+    height: 20%;
+    padding: 4px;
+    border-radius: var(--border_radius);    
+}
+
+/* season */
+.winterStyle{
+    /* border: solid var(--winter) 1px; */
+    background-color: var(--winter);
+    color: var(--colorWinter)
+}
+
+.summerStyle{
+    /* background-color: var(--summer);
+    color: var(--summerColor) */
+}
+
+.temparature{
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.definition{
+    font-size: 20px;
+}
+
+.min_and_maxTemp{
+    top: 65%;
+    position: absolute;
+    left: 50%;
+    font-size: 20px;
+    width: 150%;
+}
+
+.feels_like{
+    position: absolute;
+    top: 60%;
+    left: 68vw;
+    width: 100%;
+    font-size: 20px;
+}
+
+.humidity{
+    position: relative;
+    left: 2%;
+    font-size: 17px;
+}
+
+.pressureIcon{
+    position: relative;
+    left: 10%;
+}
+
+.pressure{
+    position: relative;
+    left: 12%;
+    font-size: 17px;
+}
+
+.windSpeedIcon{
+    position: relative;
+    left: 18%;
+}
+
+.windSpeedText{
+    position: relative;
+    left: 21%;
+    font-size: 17px;
+}
+
+.countryCode{
+    position: relative;
+    left: 25%;
+}
+
+.countryCodeText{
+    position: relative;
+    top: 93%;
+    left: 27%;
+    /* font-size: 17px; */
+}
+
+#weather-data{
+    /* position: absolute; */
+    width: 170%;
+}
+
+#weather-data img{
+    position: relative;
+    width: 9%;
+    /* height: 25%; */
+    /* border-radius: 50%; */
+    object-fit: cover;
+}
+
+
+.additionalInformation {
+    position: absolute;
+    top: 15%;
+    left: 0;
+    /* height: 100%; */
+}
+
+.additionalInformation img {
+    position: relative;
+    left: 77vw;
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#map{
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    width: 100%;
+    height: 75%;
+    border-radius: 8px;
+}
+
+:root{
+    --noteBorderColor: #F39C12 
+}
+
+.noteForUser{
+    position: absolute;
+    top: 53%;
+    border: solid var(--noteBorderColor) 1px;
+    width: 80vw;
+    padding: 15px;
+    border-radius: 8px;
+    left: 9%;
+    /* max-width: 50vw; */
+}
+
+.noteForUser span{
+    position: relative;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+.noteForUser span.extraText {
+    margin-top: 10px; /* Регулируйте отступ, как вам нужно */
+    display: block; /* Чтобы текст начинался с новой строки */
+}
+
+/* loader */
+
+:root{
+    --loadingBackground: #273746 
+}
+
+.loading{
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color:var(--loadingBackground);
+    z-index: 110000;
+
+}
+.loader {
+    position: absolute;
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    z-index: 110000;
+    left: 50%;
+    top: 30%;
+    font-size: 15px;
+  }
+    .loader:before,
+    .loader:after {
+     z-index: 110000;
+
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 300%;
+      height: 300%;
+      border-radius: 50%;
+      transform: rotateX(70deg);
+      animation: 1s spin linear infinite;
+    }
+    .loader:after {
+      color: #FF3D00;
+      transform: rotateY(70deg);
+      animation-delay: .4s;
+    }
+
+  @keyframes rotate {
+    0% {
+      transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+  }
+
+  @keyframes rotateccw {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+
+  @keyframes spin {
+    0%,
+    100% {
+      box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+      box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+      box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+      box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+      box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+      box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+      box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+      box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+  }
+
+.articles{
+  position: relative;
+  /* margin-top: 300%; */
+  top: 200%;
+}
+
+.newsBtn{
+  position: absolute;
+  top: 3.5%;
+  background: var(--headerBackgroundColor);
+  border: solid #000 1px;
+  left: 0%;
+  z-index: 10001;
+  padding: 5px;
+  border-radius: 8px;
+  width: 15%;
+  left: 54%;
+  transition: 0.5s ease;
+}
+
+.newsBtn:hover{
+  background-color: #000;
+  color: var(--headerBackgroundColor)
+}
+
+.additionalInfo{
+  position: absolute;
+  top: 155%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода | Главная</title>
+    <link rel="stylesheet" href="/main/css/main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <!-- <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script> -->
+</head>
+<body>
+    <div class="container">
+            <div class="wrapper">
+                <div class="additionalInfo">
+                    <h1>14-Day Extended Weather Forecast</h1>
+                <div id="weather-container"></div>
+                </div>
+            <div class="navigation">
+                <span class="showTheNameOfCity"></span>
+                <input type="text" v-model="city" class="form-control" id="cityName" placeholder="Введите город">
+                <button class="btn btn-primary" @click="getTheNameOfTheCity">Подтвердить</button>
+               
+            </div>
+            
+           <form action="/news">
+            <button class="newsBtn">News</button>
+           </form>
+            <div class="header">
+                <div id="weather-data">
+                    <span class="temparature"></span>
+                    <p class="definition"></p>
+                    <span class="min_and_maxTemp"></span>
+                    <span class="feels_like"></span>
+                    <img src="https://as1.ftcdn.net/v2/jpg/07/09/75/80/1000_F_709758037_A2eLgavW8eHtf0tIXISFqg4zooCPG8hx.jpg" alt="">
+                    <span class="humidity"></span>
+                    <img class="pressureIcon" src="https://as2.ftcdn.net/v2/jpg/06/69/53/89/1000_F_669538929_PlRC8T2TQJ5Kc5cg9zuJXW9oWggypjJF.jpg" alt="">
+                    <span class="pressure"></span>
+                    <img  class="windSpeedIcon" src="https://cdn-icons-png.flaticon.com/128/7513/7513167.png" alt="">
+                    <span class="windSpeedText"></span>
+                    <img src="" alt="" class="countryCode">
+                    <span class="countryCodeText"></span>
+                    <span class="rainVolumeText"></span>
+                </div>
+            </div>
+            <div class="noteForUser">
+                <span class="text"></span>
+            </div>
+
+            <div id="map"></div>
+            <div class="additionalInformation">
+                <img src="" alt="" id="body_img">
+            </div>
+        </div>
+        <div class="loading">
+            <span class="loader"></span>
+        </div>
+    </div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="/main/mainPageClientCode.js"></script>
+    <script src="/main/mainPageInfo.js"></script>
+    
+</body>
+</html>
